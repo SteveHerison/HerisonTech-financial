@@ -13,7 +13,7 @@ const Posts = () => {
           <Image src={Publicar} alt="f" width={20} height={20} />
           <div>
             <p>total</p>
-            <strong className="text-xl text-yellow-200 xl:text-2xl font-custom">
+            <strong className="text-xl text-yellow-200 xl:text-2xl font-custom font-jetBrains">
               $900,00
             </strong>
           </div>
@@ -22,25 +22,33 @@ const Posts = () => {
           <div className="w-full px-4 border-l-4 border-red-600">
             <span>
               <p>Savings</p>
-              <strong className="text-yellow-300 font-custom">$159</strong>
+              <strong className="text-yellow-300 font-custom font-jetBrains">
+                $159
+              </strong>
             </span>
           </div>
           <div className="w-full px-4 border-l-4 border-blue-500">
             <span>
               <p>Savings</p>
-              <strong className="text-yellow-300 font-custom">$40</strong>
+              <strong className="text-yellow-300 font-custom font-jetBrains">
+                $40
+              </strong>
             </span>
           </div>
           <div className="w-full px-4 border-l-4 border-white">
             <span>
               <p>Savings</p>
-              <strong className="text-yellow-300 font-custom">$110</strong>
+              <strong className="text-yellow-300 font-custom font-jetBrains">
+                $110
+              </strong>
             </span>
           </div>
           <div className="w-full px-4 border-l-4 border-yellow-400">
             <span>
               <p>Savings</p>
-              <strong className="text-yellow-300 font-custom">$10</strong>
+              <strong className="text-yellow-300 font-custom font-jetBrains">
+                $10
+              </strong>
             </span>
           </div>
         </div>

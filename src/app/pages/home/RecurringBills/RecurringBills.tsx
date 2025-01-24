@@ -10,25 +10,33 @@ const RecurringBills = () => {
         <div className="flex items-center w-full h-16 px-4 border-l-4 border-red-600 bg-blue-950 rounded-xl">
           <span className="flex items-center justify-between w-full py-2">
             <p>Savings</p>
-            <strong className="text-yellow-300 font-custom">$159</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              $159
+            </strong>
           </span>
         </div>
         <div className="flex items-center w-full h-16 px-4 border-l-4 border-red-600 bg-blue-950 rounded-xl">
           <span className="flex items-center justify-between w-full py-2">
             <p>Savings</p>
-            <strong className="text-yellow-300 font-custom">$159</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              $159
+            </strong>
           </span>
         </div>
         <div className="flex items-center w-full h-16 px-4 border-l-4 border-red-600 bg-blue-950 rounded-xl">
           <span className="flex items-center justify-between w-full py-2">
             <p>Savings</p>
-            <strong className="text-yellow-300 font-custom">$159</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              $159
+            </strong>
           </span>
         </div>
         <div className="flex items-center w-full h-16 px-4 border-l-4 border-red-600 bg-blue-950 rounded-xl">
           <span className="flex items-center justify-between w-full py-2">
             <p>Savings</p>
-            <strong className="text-yellow-300 font-custom">$159</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              $159
+            </strong>
           </span>
         </div>
       </div>

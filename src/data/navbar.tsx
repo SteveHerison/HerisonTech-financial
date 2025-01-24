@@ -23,7 +23,7 @@ export const listNav: NavItem[] = [
     icon: Orcamentos,
     iconActive: OrcamentosActive,
     label: "Orçamento",
-    href: "/orcament",
+    href: "/Orcamento",
   },
   {
     icon: Publicar,

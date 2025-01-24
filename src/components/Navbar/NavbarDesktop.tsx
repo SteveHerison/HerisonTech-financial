@@ -5,7 +5,7 @@ import { Nav } from "@/components/Navbar/Nav";
 
 export const NavbarDesktop = () => {
   return (
-    <nav className="pr-3 w-40 py-3 bg-gray-950 md:rounded-r-3xl h-full flex flex-col justify-between">
+    <nav className="pr-3 w-40 py-3  bg-gray-950 md:rounded-r-xl h-full flex flex-col justify-between">
       <h2 className="text-2xl text-center ">Finance</h2>
 
       <ul className="text-xs flex flex-col space-y-7">

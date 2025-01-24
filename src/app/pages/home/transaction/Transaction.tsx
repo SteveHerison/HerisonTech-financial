@@ -9,35 +9,45 @@ const Transaction = () => {
         <div className="flex items-center justify-between pb-4 border-b">
           <p>Emma Richardson</p>
           <div>
-            <strong className="text-yellow-300 font-custom">+$74.84</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              +$74.84
+            </strong>
             <p>19 ago 2024</p>
           </div>
         </div>
         <div className="flex items-center justify-between pb-4 border-b">
           <p>Emma Richardson</p>
           <div>
-            <strong className="text-yellow-300 font-custom">+$74.84</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              +$74.84
+            </strong>
             <p>19 ago 2024</p>
           </div>
         </div>
         <div className="flex items-center justify-between pb-4 border-b">
           <p>Emma Richardson</p>
           <div>
-            <strong className="text-yellow-300 font-custom">+$74.84</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              +$74.84
+            </strong>
             <p>19 ago 2024</p>
           </div>
         </div>
         <div className="flex items-center justify-between pb-4 border-b">
           <p>Emma Richardson</p>
           <div>
-            <strong className="text-yellow-300 font-custom">+$74.84</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              +$74.84
+            </strong>
             <p>19 ago 2024</p>
           </div>
         </div>
         <div className="flex items-center justify-between pb-4 border-b">
           <p>Emma Richardson</p>
           <div>
-            <strong className="text-yellow-300 font-custom">+$74.84</strong>
+            <strong className="text-yellow-300 font-custom font-jetBrains">
+              +$74.84
+            </strong>
             <p>19 ago 2024</p>
           </div>
         </div>
