@@ -1,4 +1,4 @@
-import { Balance } from "../Balance_chart/balance";
+import { Balance } from "../../Balance_chart/Balance";
 
 export default function BudgetsCard() {
   return (

@@ -17,13 +17,13 @@ export const listNav: NavItem[] = [
     icon: Transferencias,
     iconActive: TransferenciasActive,
     label: "Transfe",
-    href: "/Transactions",
+    href: "/transactions",
   },
   {
     icon: Orcamentos,
     iconActive: OrcamentosActive,
     label: "Orçamento",
-    href: "/Orcamento",
+    href: "/orcamento",
   },
   {
     icon: Publicar,

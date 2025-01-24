@@ -43,7 +43,7 @@ export default function Transactions() {
   ]);
 
   return (
-    <section className="flex flex-col h-full py-8 gap-y-4 containers">
+    <section className="flex flex-col h-full px-10 pt-8 pb-2 gap-y-4 containers">
       <h2 className="mb-4 text-2xl font-bold">Transactions</h2>
 
       <div className="flex flex-col h-full p-4 text-white bg-blue-900 gap-y-6 rounded-xl">
