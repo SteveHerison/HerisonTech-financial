@@ -13,7 +13,7 @@ export default function Home() {
           <Posts />
           <Transaction />
         </div>
-        <div className="flex flex-col w-full h-full gap-6 ">
+        <div className="flex flex-col w-full h-full gap-6 pt-6 sm:pt-0">
           <Budgets />
           <RecurringBills />
         </div>

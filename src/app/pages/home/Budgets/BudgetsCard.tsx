@@ -1,49 +1,34 @@
+import { data } from "@/data/data";
 import { Balance } from "../../Balance_chart/Balance";
 
 export default function BudgetsCard() {
+  const limit = 4;
   return (
     <div className="flex  flex-col gap-y-5 bg-blue-900 rounded-xl flex-1">
-      <div className="flex flex-col w-full md:flex-row h-full items-center gap-3 xl:gap-0">
+      <div className="flex flex-col w-full md:flex-row h-full  gap-4">
         <Balance />
 
         <div className="flex w-full md:max-w-20 lg:max-w-32 xl:max-w-40 flex-row h-full items-center justify-between md:flex-col">
-          <div className="flex gap-2">
-            <div className="border-red-500 border-l-4" />
-            <span className="flex flex-col">
-              <p>Savings</p>
-              <strong className="text-yellow-300 font-custom font-jetBrains">
-                $40
-              </strong>
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <div className="border-blue-300 border-l-4" />
-            <span className="flex flex-col">
-              <p>Savings</p>
-              <strong className="text-yellow-300 font-custom font-jetBrains">
-                $40
-              </strong>
-            </span>
-          </div>
-
-          <div className="flex gap-2">
-            <div className="border-yellow-300 border-l-4" />
-            <span className="flex flex-col">
-              <p>Savings</p>
-              <strong className="text-yellow-300 font-custom font-jetBrains">
-                $40
-              </strong>
-            </span>
-          </div>
-          <div className="flex gap-2">
-            <div className="border-green-700 border-l-4" />
-            <span className="flex flex-col">
-              <p>Savings</p>
-              <strong className="text-yellow-300 font-custom font-jetBrains">
-                $40
-              </strong>
-            </span>
-          </div>
+          <ul className="grid items-center w-full grid-cols-2 md:grid-cols-1 gap-4 h-full">
+            {data.pots.slice(0, limit).map((item, index) => (
+              <li key={index}>
+                <div
+                  className="w-full px-2 border-l-4"
+                  style={{ borderLeftColor: item.theme }}
+                >
+                  <span>
+                    <p>{item.name}</p>
+                    <strong className="text-yellow-300 font-jetBrains text-sm md:">
+                      {item.total.toLocaleString("pt-BR", {
+                        style: "currency",
+                        currency: "BRL",
+                      })}
+                    </strong>
+                  </span>
+                </div>
+              </li>
+            ))}
+          </ul>
         </div>
       </div>
     </div>
