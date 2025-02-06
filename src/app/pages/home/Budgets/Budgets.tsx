@@ -9,6 +9,7 @@ export default function Budgets() {
 
         <Link href="/orcamento">See Datails - </Link>
       </div>
+
       <BudgetsCard />
     </div>
   );
