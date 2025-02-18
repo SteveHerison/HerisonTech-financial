@@ -16,7 +16,7 @@ const BudgetTracker: React.FC = () => {
   ];
 
   return (
-    <div className="max-w-lg mx-auto p-6  rounded-lg font-jetBrains">
+    <div className="max-w-lg mx-auto   rounded-lg font-jetBrains">
       <div className="text-center mb-6">
         <div className="w-full h-64">
           <ResponsiveContainer>

@@ -20,7 +20,7 @@ export default function OrcamentoChart() {
           <BudgetTracker />
 
           <div className="flex flex-col w-full h-full justify-between">
-            <h2 className="py-5 text-xl">Spending SUmmary</h2>
+            <h2 className="pb-5 text-xl">Spending SUmmary</h2>
             <ul className="flex flex-col h-full gap-4">
               {data.pots.map((item, index) => (
                 <li key={index} className="h-full flex items-center">

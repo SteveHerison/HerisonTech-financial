@@ -57,7 +57,6 @@ export default function Transactions() {
             </thead>
             {data.transactions.map((item, index) => (
               <tbody key={index} className="border-b border-white/15">
-                {" "}
                 <tr className="odd:bg-blue-700 even:bg-blue-800 hover:bg-blue-600">
                   <td className="px-4 py-2">{item.name}</td>
                   <td className="px-4 py-2 hidden sm:table-cell">

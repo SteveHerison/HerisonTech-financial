@@ -12,7 +12,7 @@ export const Nav = ({ label, href, icon, iconActive }: NavItem) => {
     <Link
       href={href}
       className={cn(
-        "flex flex-col h-14 items-center justify-center text-white hover:bg-blue-700 hover:md:border-l-2 hover:text-yellow-200 font-semibold hover:border-b-2 md:hover:border-b-0 md:border-b-0 hover:border-yellow-300 rounded-t-xl md:rounded-s-none md:rounded-r-xl ",
+        "flex flex-col h-full md:p-6 items-center justify-center text-white hover:bg-blue-700 hover:md:border-l-2 hover:text-yellow-200 font-semibold hover:border-b-2 md:hover:border-b-0 md:border-b-0 hover:border-yellow-300 rounded-t-xl md:rounded-s-none md:rounded-r-xl ",
         isActive &&
           "border-b-2 md:border-l-2 border-blue-600 bg-amber-300 text-blue-950"
       )}
