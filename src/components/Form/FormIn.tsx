@@ -1,0 +1,98 @@
+import React, { useState } from "react";
+import Input from "./Input"; // Componente reutilizável para inputs
+
+const FormIn = () => {
+  // Estados para armazenar os valores do formulário
+  const [name, setName] = useState("");
+  const [password, setPassword] = useState("");
+
+  // Estados para erros de validação
+  const [nameError, setNameError] = useState("");
+  const [passwordError, setPasswordError] = useState("");
+
+  // Função de validação para o campo "name"
+  const validateName = () => {
+    if (!name.trim()) {
+      setNameError("O nome é obrigatório.");
+      return false;
+    }
+    setNameError(""); // Limpa o erro se válido
+    return true;
+  };
+
+  // Função de validação para o campo "password"
+  const validatePassword = () => {
+    if (!password.trim()) {
+      setPasswordError("A senha é obrigatória.");
+      return false;
+    }
+    if (password.length < 6) {
+      setPasswordError("A senha deve ter no mínimo 6 caracteres.");
+      return false;
+    }
+    setPasswordError(""); // Limpa o erro se válido
+    return true;
+  };
+
+  // Função para tratar o envio do formulário
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault(); // Evita o comportamento padrão do formulário
+
+    const isNameValid = validateName();
+    const isPasswordValid = validatePassword();
+
+    if (isNameValid && isPasswordValid) {
+      console.log("Formulário enviado com sucesso!");
+      console.log({ name, password });
+      // Aqui você pode chamar uma função para enviar os dados, ex: login()
+      setName(""); // Limpa o campo "name"
+      setPassword(""); // Limpa o campo "password"
+    }
+  };
+
+  return (
+    <form onSubmit={handleSubmit} className="space-y-4">
+      {/* Campo Nome */}
+      <div>
+        <Input
+          type="text"
+          name="name"
+          label="Nome"
+          id="name"
+          placeholder="Digite seu nome"
+          value={name}
+          onChange={setName}
+          onBlur={validateName} // Valida o campo ao perder o foco
+        />
+        {nameError && <p className="text-red-500 text-sm mt-1">{nameError}</p>}
+      </div>
+
+      {/* Campo Senha */}
+      <div>
+        <Input
+          type="password"
+          name="password"
+          label="Senha"
+          id="password"
+          placeholder="Digite sua senha"
+          value={password}
+          onChange={setPassword}
+          onBlur={validatePassword} // Valida o campo ao perder o foco
+        />
+        {passwordError && (
+          <p className="text-red-500 text-sm mt-1">{passwordError}</p>
+        )}
+      </div>
+
+      {/* Botão de Envio */}
+      <button
+        type="submit"
+        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
+      >
+        Enviar
+      </button>
+    </form>
+  );
+};
+
+export default FormIn;
