@@ -1,5 +1,3 @@
-import Publicar from "@/../public/iconsPixels/Shopping-Shipping-Receipt-Slip--Streamline-Pixel.svg";
-import Image from "next/image";
 import { data } from "@/data/data";
 import Link from "next/link";
 
@@ -15,7 +13,6 @@ const Posts = () => {
       </div>
       <div className="flex flex-col h-full gap-y-5 md:gap-y-0 md:gap-x-3 md:flex-row">
         <div className="flex items-center w-full h-full p-2 gap-x-3 shadow-md bg-blue-950 rounded-xl">
-          <Image src={Publicar} alt="f" width={20} height={20} />
           <div>
             <p>total</p>
             <strong className="text-xl text-yellow-200 xl:text-2xl font-custom font-jetBrains">

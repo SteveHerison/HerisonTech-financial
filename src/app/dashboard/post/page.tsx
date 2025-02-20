@@ -1,4 +1,4 @@
-import { Publi } from "../pages/Publicar";
+import { Publi } from "@/app/pages/Publicar";
 
 export default function Publicar() {
   return (

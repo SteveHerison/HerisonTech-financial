@@ -2,12 +2,14 @@
 
 import { data } from "@/data/data";
 
-import OrcamentoCard from "../pages/Orcamento/OrcamentoCard";
-import BudgetTracker from "../pages/Balance_chart/balanceCard";
-
-export default function OrcamentoChart() {
+import BudgetTracker from "../../pages/Balance_chart/balanceCard";
+import { Entertainment } from "@/app/pages/Orcamento/Entertainment";
+import { Bills } from "@/app/pages/Orcamento/Bills";
+import { DiningOut } from "@/app/pages/Orcamento/DiningOut";
+import { PersonalCare } from "@/app/pages/Orcamento/PersonalCare";
+export default function Orcamento() {
   return (
-    <section className="flex flex-col h-full px-10 pt-8 pb-2  gap-y-4 containers overflow-y-auto lg:overflow-y-hidden ">
+    <section className="flex flex-col w-full h-full px-10 pt-8 pb-2  gap-y-4 containers overflow-y-auto">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl">Orçamentos</h2>
         <button className="rounded-lg p-2 bg-blue-800 hover:bg-yellow-300 hover:text-blue-900 font-semibold">
@@ -15,7 +17,7 @@ export default function OrcamentoChart() {
         </button>
       </div>
 
-      <div className=" flex gap-2 w-full h-full flex-col lg:flex-row">
+      <div className=" flex gap-2 w-full  flex-col lg:flex-row overflow-y-auto">
         <div className="flex bg-blue-900 p-5 rounded-xl lg:w-2/5 flex-col sm:flex-row lg:flex-col max-h-[680px] sm:gap-y-20 sm:gap-x-10 lg:gap-y-0 ">
           <BudgetTracker />
 
@@ -52,8 +54,11 @@ export default function OrcamentoChart() {
             </ul>
           </div>
         </div>
-        <section className="lg:w-2/3 h-full w-full lg:px-6 lg:overflow-y-auto">
-          <OrcamentoCard />
+        <section className="lg:w-2/3 h-full w-full lg:px-6 gap-2 flex flex-col">
+          <Entertainment />
+          <Bills />
+          <DiningOut />
+          <PersonalCare />
         </section>
       </div>
     </section>

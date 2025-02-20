@@ -1,6 +1,5 @@
-export interface NavItem {
+export interface NavItems {
   icon: string;
-  iconActive: string;
   label: string;
-  href: string;
+  path: string;
 }

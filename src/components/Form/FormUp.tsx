@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import Input from "./Input"; // Componente reutilizável para inputs
+import Input from "./Input";
 
 const FormUp = () => {
   // Estados para armazenar os valores do formulário
+
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");

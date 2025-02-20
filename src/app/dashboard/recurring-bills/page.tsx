@@ -1,4 +1,4 @@
-import Fatura from "../pages/Fatura";
+import Fatura from "@/app/pages/Fatura";
 
 export default function Faturas() {
   return (

@@ -1,6 +1,6 @@
 "use client";
 import Sort from "@/../public/images/icon-sort-mobile.svg";
-import Faturas from "@/../public/iconsPixels/Money-Payments-Accounting-Calculator--Streamline-Pixel.svg";
+
 import Image from "next/image";
 import { useState } from "react";
 
@@ -35,7 +35,6 @@ const Fatura = () => {
     <div className="flex w-full h-full flex-col justify-between gap-8 lg:flex-row">
       <div className=" flex flex-1 justify-between lg:justify-start flex-col sm:flex-row gap-4 lg:flex-col ">
         <div className="bg-blue-900 h-40  w-full rounded-xl p-2 flex gap-5 items-center  sm:flex-col sm:items-start sm:p-4">
-          <Image src={Faturas} width={40} height={40} alt="2" />
           <div className="flex flex-col gap-3">
             <h2>total bills</h2>
             <p className="text-2xl font-jetBrains">R$398.89</p>
