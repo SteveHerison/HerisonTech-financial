@@ -2,7 +2,11 @@ import type { NextConfig } from "next";
 import type { RuleSetRule } from "webpack";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: false,
+  images: {
+    domains: [], // Adicione domínios de imagens externos, se necessário
+    formats: ["image/avif", "image/webp"],
+  },
+
   webpack(config) {
     const fileLoaderRule = config.module.rules.find(
       (rule: RuleSetRule) =>
