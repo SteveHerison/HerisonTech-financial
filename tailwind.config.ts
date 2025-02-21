@@ -1,4 +1,5 @@
 import type { Config } from "tailwindcss";
+
 import tailwindcssAnimate from "tailwindcss-animate";
 
 export default {
@@ -13,6 +14,7 @@ export default {
       fontFamily: {
         jetBrains: ["var(--font-jetbrains-mono)", "monospace"],
         pixelify: ["Pixelify Sans", "sans-serif"],
+        firacode: ["Fira Code", "monospace"],
       },
       colors: {
         background: "hsl(var(--background))",

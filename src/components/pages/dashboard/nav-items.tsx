@@ -18,13 +18,15 @@ export const NavItem = () => {
           <Link
             key={item.path}
             href={item.path}
-            className="w-full h-full md:h-10"
+            className="w-full h-full md:h-10 pl-1"
           >
             <Button
               variant="ghost"
               className={cn(
-                "w-full bg-black rounded-r-xl hover:bg-zinc-400 transition-all text-start px-2 gap-2 justify-start",
-                isActive ? "bg-zinc-400" : ""
+                "w-full bg-zinc-800 text-slate-50 rounded-r-xl hover:border-s-4 hover:border-green-700 hover:bg-zinc-300 hover:shadow-md hover:shadow-zinc-500  transition-all text-start px-2 gap-2 justify-start",
+                isActive
+                  ? "bg-zinc-300 text-zinc-800 border-s-4 border-green-700"
+                  : ""
               )}
             >
               <item.icon size={16} />

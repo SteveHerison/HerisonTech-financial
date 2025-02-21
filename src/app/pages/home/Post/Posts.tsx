@@ -4,18 +4,18 @@ import Link from "next/link";
 const Posts = () => {
   const limit = 4;
   return (
-    <div className="flex flex-col gap-y-5 bg-blue-900 p-4 rounded-xl ">
+    <div className="flex flex-col gap-y-5 bg-slate-50 p-4 rounded-xl ">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl">Post</h2>
-        <Link className="" href="/publicar">
+        <Link className="" href="/dashboard/post">
           <p>See Datails - </p>
         </Link>
       </div>
       <div className="flex flex-col h-full gap-y-5 md:gap-y-0 md:gap-x-3 md:flex-row">
-        <div className="flex items-center w-full h-full p-2 gap-x-3 shadow-md bg-blue-950 rounded-xl">
+        <div className="flex items-center w-full h-full p-2 gap-x-3 shadow-md bg-zinc-800 rounded-xl">
           <div>
-            <p>total</p>
-            <strong className="text-xl text-yellow-200 xl:text-2xl font-custom font-jetBrains">
+            <p className="text-zinc-300">total</p>
+            <strong className="text-xl text-slate-50 xl:text-2xl font-custom ">
               $900,00
             </strong>
           </div>
@@ -30,7 +30,7 @@ const Posts = () => {
               >
                 <span>
                   <p>{item.name}</p>
-                  <strong className="text-yellow-300 font-jetBrains text-sm md:">
+                  <strong className="text-zinc-800 font-semibold  text-sm md:">
                     {item.total.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",

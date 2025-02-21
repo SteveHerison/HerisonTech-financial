@@ -17,7 +17,7 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${jetBrainsMono.variable} font-pixelify bg-blue-950 text-zinc-200 flex flex-col md:flex-row-reverse h-screen`}
+        className={`${jetBrainsMono.variable} font-firacode bg-zinc-900 text-zinc-700 flex flex-col md:flex-row-reverse h-screen`}
       >
         <AppProvider>{children}</AppProvider>
       </body>

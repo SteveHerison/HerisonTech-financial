@@ -26,7 +26,7 @@ const Input = ({
     <label htmlFor={id} className="flex flex-col gap-1">
       {label}
       <input
-        className="border border-gray-300 p-2"
+        className="border border-gray-300 p-2 rounded-xl text-zinc-900 font-semibold"
         type={type}
         id={id}
         name={name}

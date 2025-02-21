@@ -14,21 +14,21 @@ export default function SignInButton() {
   };
 
   return (
-    <div className="gap-2 flex flex-col">
+    <div className="gap-2 flex flex-col max-w-96 w-full">
       <Button
         variant="outline"
-        className="w-full gap-2"
+        className="w-full gap-2  bg-green-800 outline border-none hover:bg-green-900 hover:text-white transition-all"
         onClick={handleLoginGoo}
       >
-        <FaGoogle size={16} />
+        <FaGoogle size={20} />
         Entrar com Google
       </Button>
       <Button
         variant="outline"
-        className="w-full gap-2"
+        className="w-full gap-2 bg-green-800 outline border-none hover:bg-green-900 hover:text-white transition-all"
         onClick={handleLoginGit}
       >
-        <FaGithub size={16} />
+        <FaGithub size={20} />
         Entrar com GitHub
       </Button>
     </div>

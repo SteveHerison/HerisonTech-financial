@@ -5,16 +5,16 @@ const Transaction = () => {
   const limit = 6;
 
   return (
-    <div className="flex flex-col h-full gap-y-2 bg-blue-900 p-2 rounded-xl ">
+    <div className="flex flex-col h-full gap-y-2 bg-slate-50 p-2 rounded-xl ">
       <div className="h-full  overflow-y-auto">
         <div className="flex items-center justify-between">
           <h2 className="text-2xl">Transaction</h2>
-          <Link href="/transactions">See Details - </Link>
+          <Link href="/dashboard/transactions">See Details - </Link>
         </div>
         <ul className="font-jetBrains">
           {data.transactions.slice(0, limit).map((item, index) => (
             <li key={index}>
-              <div className="w-full flex justify-between items-center border-b border-white/15 py-2 px-2">
+              <div className="w-full flex justify-between items-center border-b border-zinc-900/5 py-2 px-2">
                 <p>{item.name}</p>
                 <div>
                   <p

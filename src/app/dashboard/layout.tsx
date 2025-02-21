@@ -14,13 +14,13 @@ export default async function DashboardLayout({
 
   return (
     <div className="w-full h-screen overflow-hidden grid grid-cols-[300px,1fr]">
-      <aside className="w-full h-full flex flex-col items-center bg-white/45 rounded-r-xl">
-        <div className="border-b w-full p-1  border-muted relative items-center justify-center flex border-b-white/10">
-          <Logo alt="Logo" className="w-full h-full  mx-auto " />
+      <aside className="w-full h-full flex flex-col items-center bg-slate-50 rounded-r-xl">
+        <div className="border-b w-full p-1  border-muted relative items-center justify-center flex border-b-zinc-800/10">
+          <Logo alt="Logo" className="w-full h-full  mx-auto text-zinc-800" />
         </div>
         <NavItem />
 
-        <div className="w-full mt-auto border-t border-white/15 px-3 py-4 flex items-center justify-between gap-2">
+        <div className="w-full mt-auto border-t border-zinc/10 px-3 py-4 flex items-center justify-between gap-2">
           <UserDropdwn user={session?.user} />
         </div>
       </aside>
