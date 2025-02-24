@@ -17,6 +17,16 @@ export default {
         firacode: ["Fira Code", "monospace"],
       },
       colors: {
+        fundo: "#16161a", // Background
+        texto: "#fffffe", // Headline, Button text, Main
+        paragrafo: "#94a1b2", // Paragraph
+        botao: "#7f5af0", // Button, Highlight
+        textoBotao: "#fffffe", // Button text
+        ilustração: "#010101", // Illustration Stroke
+        primário: "#7f5af0", // Primary
+        secundário: "#72757e", // Secondary
+        terciário: "#2cb67d", // Tertiary
+
         background: "hsl(var(--background))",
         foreground: "hsl(var(--foreground))",
         card: {

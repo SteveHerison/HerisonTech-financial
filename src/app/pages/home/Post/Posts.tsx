@@ -4,7 +4,7 @@ import Link from "next/link";
 const Posts = () => {
   const limit = 4;
   return (
-    <div className="flex flex-col gap-y-5 bg-slate-50 p-4 rounded-xl ">
+    <div className="flex flex-col gap-y-5 bg-primário p-4 rounded-xl ">
       <div className="flex items-center justify-between">
         <h2 className="text-2xl">Post</h2>
         <Link className="" href="/dashboard/post">
@@ -29,8 +29,8 @@ const Posts = () => {
                 style={{ borderLeftColor: item.theme }}
               >
                 <span>
-                  <p>{item.name}</p>
-                  <strong className="text-zinc-800 font-semibold  text-sm md:">
+                  <p className="text-terciário">{item.name}</p>
+                  <strong className=" font-semibold  text-sm md:">
                     {item.total.toLocaleString("pt-BR", {
                       style: "currency",
                       currency: "BRL",

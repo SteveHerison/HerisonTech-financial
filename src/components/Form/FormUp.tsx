@@ -1,39 +1,40 @@
 import React, { useState } from "react";
 import Input from "./Input";
+import { useUserContext } from "@/contexts/AuthContext"; // Import UserContext to access createUser
+import { useRouter } from "next/navigation";
 
 const FormUp = () => {
-  // Estados para armazenar os valores do formulário
-
+  const router = useRouter();
   const [name, setName] = useState("");
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
 
-  // Estados para erros de validação
   const [nameError, setNameError] = useState("");
   const [emailError, setEmailError] = useState("");
   const [passwordError, setPasswordError] = useState("");
   const [confirmPasswordError, setConfirmPasswordError] = useState("");
 
-  // Função de validação para o campo "name"
+  const { createUser } = useUserContext();
+
   const validateName = () => {
     if (!name.trim()) {
       setNameError("O nome é obrigatório.");
       return false;
     }
-    setNameError(""); // Limpa o erro se válido
-    return true;
-  };
-  const validateEmail = () => {
-    if (!name.trim()) {
-      setEmailError("O nome é obrigatório.");
-      return false;
-    }
-    setEmailError(""); // Limpa o erro se válido
+    setNameError("");
     return true;
   };
 
-  // Função de validação para o campo "password"
+  const validateEmail = () => {
+    if (!email.trim()) {
+      setEmailError("O e-mail é obrigatório.");
+      return false;
+    }
+    setEmailError("");
+    return true;
+  };
+
   const validatePassword = () => {
     if (!password.trim()) {
       setPasswordError("A senha é obrigatória.");
@@ -43,44 +44,54 @@ const FormUp = () => {
       setPasswordError("A senha deve ter no mínimo 6 caracteres.");
       return false;
     }
-    setPasswordError(""); // Limpa o erro se válido
+    setPasswordError("");
     return true;
   };
 
   const validateConfirmPassword = () => {
     if (!confirmPassword.trim()) {
-      setConfirmPasswordError("A senha é obrigatória.");
+      setConfirmPasswordError("A confirmação de senha é obrigatória.");
       return false;
     }
     if (confirmPassword !== password) {
-      setConfirmPasswordError("Senha precisa ser idêntica.");
+      setConfirmPasswordError("A senha precisa ser idêntica.");
       return false;
     }
-    setPasswordError(""); // Limpa o erro se válido
+    setConfirmPasswordError("");
     return true;
   };
 
-  // Função para tratar o envio do formulário
-  const handleSubmit = (e: React.FormEvent) => {
-    e.preventDefault(); // Evita o comportamento padrão do formulário
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
 
     const isNameValid = validateName();
+    const isEmailValid = validateEmail();
     const isPasswordValid = validatePassword();
+    const isConfirmPasswordValid = validateConfirmPassword();
 
-    if (isNameValid && isPasswordValid) {
-      console.log("Formulário enviado com sucesso!");
-      console.log({ name, email, password, confirmPassword });
-      // Aqui você pode chamar uma função para enviar os dados, ex: login()
-      setName(""); // Limpa o campo "name"
-      setEmail(""); // Limpa o campo "email"
-      setPassword(""); // Limpa o campo "password"
-      setConfirmPassword(""); // Limpa o campo "Confimação do password"
+    if (
+      isNameValid &&
+      isEmailValid &&
+      isPasswordValid &&
+      isConfirmPasswordValid
+    ) {
+      try {
+        await createUser(name, email, password, confirmPassword); // Call createUser function from UserContext
+        console.log("Usuário cadastrado com sucesso!");
+        setName("");
+        setEmail("");
+        setPassword("");
+        setConfirmPassword("");
+
+        router.push("/signin");
+      } catch (err) {
+        console.error("Erro ao cadastrar usuário:", err);
+      }
     }
   };
 
   return (
     <form onSubmit={handleSubmit} className="space-y-4">
-      {/* Campo Nome */}
       <div>
         <Input
           type="text"
@@ -90,12 +101,11 @@ const FormUp = () => {
           placeholder="Digite seu nome"
           value={name}
           onChange={setName}
-          onBlur={validateName} // Valida o campo ao perder o foco
+          onBlur={validateName}
         />
         {nameError && <p className="text-red-500 text-sm mt-1">{nameError}</p>}
       </div>
 
-      {/* Campo Senha */}
       <div>
         <Input
           type="email"
@@ -105,10 +115,10 @@ const FormUp = () => {
           placeholder="Digite seu E-mail"
           value={email}
           onChange={setEmail}
-          onBlur={validateEmail} // Valida o campo ao perder o foco
+          onBlur={validateEmail}
         />
         {emailError && (
-          <p className="text-red-500 text-sm mt-1">{passwordError}</p>
+          <p className="text-red-500 text-sm mt-1">{emailError}</p>
         )}
       </div>
 
@@ -121,7 +131,7 @@ const FormUp = () => {
           placeholder="Digite sua senha"
           value={password}
           onChange={setPassword}
-          onBlur={validatePassword} // Valida o campo ao perder o foco
+          onBlur={validatePassword}
         />
         {passwordError && (
           <p className="text-red-500 text-sm mt-1">{passwordError}</p>
@@ -131,26 +141,35 @@ const FormUp = () => {
       <div>
         <Input
           type="password"
-          name="confirmpassword"
+          name="confirmPassword"
           label="Confirme sua Senha"
           id="confirmPassword"
           placeholder="Repita a sua senha"
           value={confirmPassword}
           onChange={setConfirmPassword}
-          onBlur={validateConfirmPassword} // Valida o campo ao perder o foco
+          onBlur={validateConfirmPassword}
         />
         {confirmPasswordError && (
-          <p className="text-red-500 text-sm mt-1">{passwordError}</p>
+          <p className="text-red-500 text-sm mt-1">{confirmPasswordError}</p>
         )}
       </div>
 
-      {/* Botão de Envio */}
-      <button
-        type="submit"
-        className="bg-blue-600 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded"
-      >
-        Enviar
-      </button>
+      <div className="relative group">
+        <div className="relative w-52 h-14 opacity-90 overflow-hidden rounded-xl bg-black z-10">
+          <div className="absolute z-10 -translate-x-44 group-hover:translate-x-[30rem] ease-in transistion-all duration-700 h-full w-44 bg-gradient-to-r from-gray-500 to-white/10 opacity-30 -skew-x-12"></div>
+
+          <div className="absolute flex items-center justify-center text-white z-[1] opacity-90 rounded-2xl inset-0.5 bg-black">
+            <button
+              type="submit"
+              name="text"
+              className="input font-semibold text-lg h-full opacity-90 w-full px-16 py-3 rounded-xl bg-black"
+            >
+              Enviar
+            </button>
+          </div>
+          <div className="absolute duration-1000 group-hover:animate-spin w-full h-[100px] bg-gradient-to-r from-green-500 to-yellow-500 blur-[30px]"></div>
+        </div>
+      </div>
     </form>
   );
 };

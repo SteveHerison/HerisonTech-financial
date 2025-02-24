@@ -16,10 +16,10 @@ export default function Transactions() {
             className="w-1/2 p-2 text-black rounded-md"
           />
           <div className="flex gap-x-4 text-slate-50">
-            <button className="px-4 py-2 bg-zinc-800 rounded-lg hover:bg-green-700 hover:text-zinc-800">
+            <button className="px-4 py-2 bg-primário rounded-lg hover:bg-green-700 hover:text-zinc-800">
               <p className="hidden sm:flex"> Sort</p>
             </button>
-            <button className="px-4 py-2 bg-zinc-800 rounded-lg hover:bg-green-700 hover:text-zinc-800">
+            <button className="px-4 py-2 bg-primário rounded-lg hover:bg-green-700 hover:text-zinc-800">
               <p className="hidden sm:flex"> Filter by Category</p>
             </button>
           </div>
@@ -29,7 +29,7 @@ export default function Transactions() {
         <div className=" overflow-x-auto rounded-xl h-full font-jetBrains">
           <table className="w-full text-sm text-left table-auto">
             <thead>
-              <tr className="text-white bg-zinc-800">
+              <tr className="text-white bg-ilustração">
                 <th className="px-4 py-2">Person</th>
                 <th className="px-4 py-2 hidden sm:table-cell">Type</th>
 
@@ -42,7 +42,7 @@ export default function Transactions() {
                 key={index}
                 className="border-b border-white/15 text-slate-50"
               >
-                <tr className="odd:bg-zinc-800 even:bg-zinc-800 hover:bg-green-700">
+                <tr className="odd:bg-primário even:bg-primário/80 hover:bg-primário/90">
                   <td className="px-4 py-2">{item.name}</td>
                   <td className="px-4 py-2 hidden sm:table-cell">
                     {item.category}
@@ -67,8 +67,8 @@ export default function Transactions() {
 
         {/* Pagination */}
         <div className="flex justify-between w-full text-sm">
-          <button className=" w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-lg hover:bg-green-700"></button>
-          <button className=" w-10 h-10 flex items-center justify-center bg-zinc-800 rounded-lg hover:bg-green-700"></button>
+          <button className=" w-10 h-10 flex items-center justify-center bg-primário rounded-lg hover:bg-green-700"></button>
+          <button className=" w-10 h-10 flex items-center justify-center bg-primário rounded-lg hover:bg-green-700"></button>
         </div>
       </div>
     </section>

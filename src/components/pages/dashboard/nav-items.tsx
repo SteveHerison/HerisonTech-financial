@@ -23,9 +23,9 @@ export const NavItem = () => {
             <Button
               variant="ghost"
               className={cn(
-                "w-full bg-zinc-800 text-slate-50 rounded-r-xl hover:border-s-4 hover:border-green-700 hover:bg-zinc-300 hover:shadow-md hover:shadow-zinc-500  transition-all text-start px-2 gap-2 justify-start",
+                "w-full bg-terciário text-texto rounded-r-xl  hover:border-s-4 hover:border-primário hover:bg-fundo hover:shadow-md hover:text-terciário hover:shadow-zinc-500  transition-all text-start px-2 gap-2 justify-start",
                 isActive
-                  ? "bg-zinc-300 text-zinc-800 border-s-4 border-green-700"
+                  ? "bg-primário text-texto border-s-4 border-terciário"
                   : ""
               )}
             >

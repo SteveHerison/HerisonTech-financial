@@ -1,8 +1,8 @@
 "use client";
 
+import { UserProvider } from "@/contexts/AuthContext";
 import "./globals.css";
 import { JetBrains_Mono } from "next/font/google";
-import { AppProvider } from "@/contexts";
 
 const jetBrainsMono = JetBrains_Mono({
   subsets: ["latin"],
@@ -17,9 +17,9 @@ export default function RootLayout({
   return (
     <html lang="pt-BR">
       <body
-        className={`${jetBrainsMono.variable} font-firacode bg-zinc-900 text-zinc-700 flex flex-col md:flex-row-reverse h-screen`}
+        className={`${jetBrainsMono.variable} font-firacode bg-fundo text-texto flex flex-col md:flex-row-reverse h-screen`}
       >
-        <AppProvider>{children}</AppProvider>
+        <UserProvider>{children}</UserProvider>
       </body>
     </html>
   );

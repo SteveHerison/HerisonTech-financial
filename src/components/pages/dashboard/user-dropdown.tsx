@@ -33,12 +33,15 @@ export const UserDropdwn = ({ user }: UseDropdownProps) => {
   return (
     <DropdownMenu>
       <DropdownMenuTrigger asChild>
-        <Button variant="ghost" className="w-full gap-2 justify-start px-2">
+        <Button
+          variant="ghost"
+          className="w-full gap-2 justify-start px-2 hover:bg-primário"
+        >
           <Avatar className="w-7 h-7 block">
             <AvatarImage src={user.image ?? " "} />
             <AvatarFallback>{initials}</AvatarFallback>
           </Avatar>
-          <p>{user?.name}</p>
+          <p className="text-fundo">{user?.name}</p>
         </Button>
       </DropdownMenuTrigger>
       <DropdownMenuContent
@@ -54,10 +57,7 @@ export const UserDropdwn = ({ user }: UseDropdownProps) => {
             Configurações de Conta
           </DropdownMenuItem>
         </Link>
-        <DropdownMenuItem
-          className="gap-2"
-          onClick={() => signOut({ callbackUrl: "/signin" })}
-        >
+        <DropdownMenuItem className="gap-2" onClick={() => signOut()}>
           <LogOut size={16} />
           Sair
         </DropdownMenuItem>

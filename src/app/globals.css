@@ -80,7 +80,7 @@
 }
 
 *::-webkit-scrollbar-thumb {
-  background-color: #010431;
+  background-color: #16161a;
   border-radius: 14px;
 }
 
@@ -92,8 +92,6 @@
     @apply bg-background text-foreground;
   }
 }
-
-
 
 @layer base {
   * {

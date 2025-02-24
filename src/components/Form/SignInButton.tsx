@@ -16,16 +16,14 @@ export default function SignInButton() {
   return (
     <div className="gap-2 flex flex-col max-w-96 w-full">
       <Button
-        variant="outline"
-        className="w-full gap-2  bg-green-800 outline border-none hover:bg-green-900 hover:text-white transition-all"
+        className="w-full gap-2  bg-botao  border-none hover:bg-paragrafo hover:text-white transition-all"
         onClick={handleLoginGoo}
       >
         <FaGoogle size={20} />
         Entrar com Google
       </Button>
       <Button
-        variant="outline"
-        className="w-full gap-2 bg-green-800 outline border-none hover:bg-green-900 hover:text-white transition-all"
+        className="w-full gap-2 bg-botao  border-none hover:bg-paragrafo hover:text-white transition-all"
         onClick={handleLoginGit}
       >
         <FaGithub size={20} />

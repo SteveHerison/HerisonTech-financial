@@ -2,7 +2,7 @@ import Link from "next/link";
 
 const RecurringBills = () => {
   return (
-    <div className="flex flex-col gap-y-5 bg-slate-50 p-2 rounded-xl">
+    <div className="flex flex-col gap-y-5 bg-primário p-2 rounded-xl">
       <div className="flex items-center justify-between ">
         <h2 className="text-xl md:text-2xl ">Recurring Bills</h2>
         <Link href="/dashboard/recurring-bills">See Datails - </Link>
